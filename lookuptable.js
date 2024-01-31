@@ -163,19 +163,14 @@ function convertSsid(ssid) {
     return (lookup.hasOwnProperty(ssid)) ? lookup[ssid] : ssid;
 }
 
-$(function() {
+$(function(){
     if (typeof sb !== "undefined") {
-        const querySsid = sb.URI.getQueryParameterByName('ssid');
+        var querySsid = sb.URI.getQueryParameterByName('ssid');
     }
+
     if (querySsid) {
         var dbSsid = convertSsid(querySsid);
-        console.log('converted: ' + dbSsid);
-
-        sbf.forms['mainform'].addData({
-            'ssid': dbSsid
-        });
-        setTimeout(function() {
-            $('input[name="ssid"]').val(dbSsid).trigger('change');
-        }, 2000);
+        sbf.forms['mainform'].addData({'ssid': dbSsid});
+        setTimeout(function() {$('input[name="ssid"]').val(dbSsid).trigger('change');}, 2000);
     }
 });
