@@ -1,10 +1,7 @@
 // $(function(){
 //populate subSupplierID
     var lookup = {
-        //Conversant Website ID: Databowl SSID
-        //stylist
         "9275654": 9212646,
-        //dealmoon
         "8439680": 9212679,
         "9212712": 100247161,  
         "100204151": 9212746,
