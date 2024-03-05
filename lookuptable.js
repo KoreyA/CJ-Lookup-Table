@@ -157,6 +157,10 @@ const lookup = {
     "8932351": 9214692,
     "100896567": 9214726,
     "101082582": 9214725,
+    "101099448": 9214795,
+    "101108745": 9214791,
+    "101116155": 9214793,
+    "101108763": 9214792,
 };
 
 function convertSsid(ssid) {
@@ -172,5 +176,5 @@ $(function(){
         var dbSsid = convertSsid(querySsid);
         sbf.forms['mainform'].addData({'ssid': dbSsid});
         setTimeout(function() {$('input[name="ssid"]').val(dbSsid).trigger('change');}, 2000);
-    }
+    } 
 });
